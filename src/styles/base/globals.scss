@@ -1,6 +1,4 @@
-/*
-
-*/
+@import "./colors.scss";
 
 *,
 *::before,
@@ -20,7 +18,8 @@ body {
   font-size: 62.5%;
   max-width: 100vw;
   overflow-x: hidden;
-  // background-color: $primary-color;
+  background-color: $background-color;
+  color: $gray;
 }
 
 a {
@@ -28,8 +27,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }
