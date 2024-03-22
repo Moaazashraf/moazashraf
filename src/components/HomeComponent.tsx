@@ -1,7 +1,12 @@
 import React from "react";
+import Preloader from "./Preloader/Preloader";
 
 function HomeComponent() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Preloader />
+    </div>
+  );
 }
 
 export default HomeComponent;
