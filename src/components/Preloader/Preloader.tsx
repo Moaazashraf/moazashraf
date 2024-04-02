@@ -1,13 +1,27 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Preloader.module.scss";
+import Image from "next/image";
+
 function Preloader() {
+  const [containerHeight, setContainerHeight] = useState(0);
+  const languagesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (languagesRef.current) {
+      const height = languagesRef.current.clientHeight;
+      console.log(height);
+
+      setContainerHeight(height);
+    }
+  }, []);
+
   const languageVariants = {
     hidden: {
       y: 0,
     },
     visible: {
-      y: "-27vh",
+      y: -containerHeight,
       transition: {
         ease: "linear",
         delay: 0.5,
@@ -15,16 +29,18 @@ function Preloader() {
       },
     },
   };
+
   return (
     <motion.div className={styles.background}>
       <div className={styles.preloader_container}>
-        <div className={styles.logo}>logo</div>
+        <Image src="/logo.svg" alt="Main Logo" width={35} height={35} />
         <div className={styles.languages_container}>
           <motion.div
             variants={languageVariants}
             initial="hidden"
             animate="visible"
             className={styles.languages}
+            ref={languagesRef}
           >
             <span>HTML</span>
             <span>CSS/SCSS</span>

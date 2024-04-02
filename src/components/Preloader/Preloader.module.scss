@@ -1,5 +1,6 @@
 @import "../../styles/base/colors.scss";
 @import "../../styles/base/typography.scss";
+@import "../../styles/layout/grid.scss";
 
 .background {
   display: flex;
@@ -16,11 +17,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10rem;
+
+    .logo {
+      height: 100%;
+    }
 
     .languages_container {
+      border-radius: 50px;
+      // box-shadow: 20px 20px 29px #0e0e16, -20px -20px 29px #12121e;
+      // box-shadow: inset 1em 1em $black-800;
       height: 3.5rem;
-      padding: 0.5rem;
+      padding: $gutter_sm;
       overflow: hidden;
       .languages {
         display: flex;

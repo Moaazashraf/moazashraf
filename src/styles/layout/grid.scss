@@ -1,0 +1,15 @@
+// PADDING OR MARGIN STANDARDS
+$gutter_xxs: 0.2rem; // 2px
+$gutter_sm: 0.8rem; // 8px
+$gutter_base: 1.6rem; // 16px
+$gutter_md: 2.4rem; // 24px
+$gutter_lg: 3.2rem; //   32px
+$gutter_xl: 4rem; // 40px
+
+// PADDING OR MARGIN STANDARDS IN NEGATIVE
+$gutter_xxs_negative: -$gutter_xxs; // -2px
+$gutter_sm_negative: -$gutter_sm; // -8px
+$gutter_base_negative: -$gutter_base; // -16px
+$gutter_md_negative: -$gutter_md; // -24px
+$gutter_lg_negative: -$gutter_lg; //   -32px
+$gutter_xl_negative: -$gutter_xl; // -40px
