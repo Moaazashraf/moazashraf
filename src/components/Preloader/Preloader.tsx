@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Preloader.module.scss";
 import Image from "next/image";
@@ -16,22 +16,39 @@ function Preloader() {
     }
   }, []);
 
+  const backgroundVariants = {
+    hidden: {
+      y: 0,
+    },
+    visible: {
+      y: "-100%",
+      transition: {
+        delay: 8,
+        duration: 3,
+      },
+    },
+  };
+
   const languageVariants = {
     hidden: {
       y: 0,
     },
     visible: {
-      y: -containerHeight,
+      y: -containerHeight + 18,
       transition: {
         ease: "linear",
-        delay: 0.5,
         duration: 8,
       },
     },
   };
 
   return (
-    <motion.div className={styles.background}>
+    <motion.div
+      className={styles.background}
+      variants={backgroundVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className={styles.preloader_container}>
         <Image src="/logo.svg" alt="Main Logo" width={35} height={35} />
         <div className={styles.languages_container}>
