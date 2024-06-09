@@ -1,7 +1,7 @@
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Preloader.module.scss";
-import Image from "next/image";
+import { Logo } from "../icons";
 
 function Preloader() {
   const [containerHeight, setContainerHeight] = useState(0);
@@ -50,7 +50,7 @@ function Preloader() {
       animate="visible"
     >
       <div className={styles.preloader_container}>
-        <Image src="/logo.svg" alt="Main Logo" width={35} height={35} />
+        <Logo />
         <div className={styles.languages_container}>
           <motion.div
             variants={languageVariants}

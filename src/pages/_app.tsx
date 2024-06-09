@@ -1,13 +1,13 @@
-// import "@/styles/base/globals.scss";
 import "@/styles/index.scss";
 import type { AppProps } from "next/app";
-import { Nunito } from "next/font/google";
+import localFont from "next/font/local";
 
-const nunito = Nunito({ weight: ["400", "700"], subsets: ["latin"] });
+const myFont = localFont({ src: "./D-DINCondensed.woff2" });
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={nunito.className}>
-      <Component {...pageProps} />;
+    <main className={myFont.className}>
+      <Component {...pageProps} />
     </main>
   );
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import Preloader from "./Preloader/Preloader";
+import { Navbar } from "./Navbar/Navbar";
 
 function HomeComponent() {
   return (
     <div>
-      <Preloader />
+      {/* <Preloader /> */}
+      <Navbar />
     </div>
   );
 }

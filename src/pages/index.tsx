@@ -9,12 +9,12 @@ export default function Home() {
         <title>Moaz Ashraf Portfolio</title>
         <meta
           name="description"
-          content="That is a website for me that preview my projects"
+          content="turning ideas into real life products is my calling."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={`${styles.main}`}>
+      <main className={styles.main}>
         <HomeComponent />
       </main>
     </>
