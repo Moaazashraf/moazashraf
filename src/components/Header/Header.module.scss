@@ -1,0 +1,49 @@
+@import "../../styles/base/colors.scss";
+@import "../../styles/base/typography.scss";
+@import "../../styles/layout/grid.scss";
+
+.header_wrapper {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+  .container {
+    grid-column: 2 / 14;
+    margin-top: $gutter_xxl;
+    padding: 0 $gutter_xl;
+
+    .heading {
+      font-family: var(--font-mark-pro);
+      font-size: 8.5rem;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      color: white;
+      position: relative;
+
+      .heading_gradient {
+        background: linear-gradient(
+          -45deg,
+          $light-blue,
+          $light-purple,
+          $light-blue,
+          $light-purple
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400% 400%;
+        animation: gradient 3s ease infinite;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

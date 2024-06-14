@@ -26,7 +26,7 @@
     gap: $gutter_sm;
     .logo_img {
       svg {
-        width: 3.5rem;
+        width: 3rem;
         path {
           fill: $gray;
         }
@@ -50,7 +50,7 @@
       border: none;
       color: $gray;
       font-size: 1.5rem;
-      font-family: inherit;
+      font-family: var(--font-d-din-condensed);
     }
 
     svg {
