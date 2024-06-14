@@ -59,9 +59,9 @@
   }
 }
 
-// @media only screen and (max-width: $screen_sm) {
-//   .container {
-//     width: 75%;
-//     padding: 2rem;
-//   }
-// }
+@media only screen and (max-width: $screen_sm) {
+  .container {
+    width: 75%;
+    padding: 2rem;
+  }
+}

@@ -27,34 +27,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-@media (max-width: $screen_md) {
-  html,
-  body {
-    font-size: 50%;
-  }
-}
-
-@media (max-width: $screen_sm) {
-  html,
-  body {
-    font-size: 45%;
-  }
-}
-
-@media (max-width: $screen_xs) {
-  html,
-  body {
-    font-size: 40%;
-  }
-}
-
-// @media (max-width: $screen_md) {
-//   .header_wrapper {
-//     .container {
-//       .heading {
-//         font-size: 6.5rem;
-//       }
-//     }
-//   }
-// }
