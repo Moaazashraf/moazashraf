@@ -59,9 +59,21 @@
   }
 }
 
-@media only screen and (max-width: $screen_sm) {
+@media (max-width: $screen_sm) {
   .container {
     width: 75%;
-    padding: 2rem;
+    padding: 1.5rem;
+    .logo_container {
+      .logo_img {
+        svg {
+          width: 2.5rem;
+        }
+      }
+    }
+    .menu_btn {
+      svg {
+        width: 3.2rem;
+      }
+    }
   }
 }

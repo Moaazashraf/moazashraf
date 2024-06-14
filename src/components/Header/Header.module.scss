@@ -4,7 +4,7 @@
 
 .header_wrapper {
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 10.6rem)) 1fr;
   .container {
     grid-column: 2 / 14;
     margin-top: $gutter_xxl;
@@ -61,6 +61,8 @@
 @media (max-width: $screen_md) {
   .header_wrapper {
     .container {
+      grid-column: 1 / 15;
+      padding: 0 $gutter_md;
       .heading {
         font-size: 6.5rem;
       }
@@ -92,38 +94,8 @@
   .header_wrapper {
     .container {
       .heading {
-        font-size: 4.6rem;
+        font-size: 4rem;
       }
     }
   }
 }
-
-// @media (max-width: 750px) {
-//   .header_wrapper {
-//     .container {
-//       .heading {
-//         font-size: 7.5rem;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: $screen_sm) {
-//   .header_wrapper {
-//     .container {
-//       .heading {
-//         font-size: 5rem;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: $screen_xs) {
-//   .header_wrapper {
-//     .container {
-//       .heading {
-//         font-size: 3.5rem;
-//       }
-//     }
-//   }
-// }
