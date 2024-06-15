@@ -3,7 +3,7 @@ name: GitHub Commit To Trello Comment
 on: [push, pull_request]
 
 jobs:
-  build:
+  trello:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +14,7 @@ jobs:
           trello-api-key: ${{ secrets.TRELLO_KEY }}
           trello-auth-token: ${{ secrets.TRELLO_TOKEN }}
           trello-board-id: ${{ secrets.TRELLO_BOARD }}
-          trello-card-action: "Attachment"
+          trello-card-action: "github"
           trello-list-name-commit: "Doing"
           trello-list-name-pr-open: "Reviewing"
           trello-list-name-pr-closed: "Testing"
