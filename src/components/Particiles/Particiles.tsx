@@ -77,7 +77,7 @@ export const Particiles = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 75,
         },
         opacity: {
           value: 0.5,
