@@ -12,6 +12,7 @@ function Header() {
           <br />
           <span>is my calling.</span>
         </header>
+        <a className={styles.view_projects_btn}>VIEW PROJECTS</a>
       </div>
     </main>
   );
