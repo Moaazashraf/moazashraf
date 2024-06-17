@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Moaz Ashraf Portfolio</title>
+        <title>Moaz Ashraf</title>
         <meta
           name="description"
           content="turning ideas into real life products is my calling."

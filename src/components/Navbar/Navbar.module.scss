@@ -19,6 +19,7 @@
   -webkit-backdrop-filter: blur(104px);
   backdrop-filter: blur(104px);
   border-radius: 2rem;
+  z-index: 2;
 
   .logo_container {
     display: flex;
