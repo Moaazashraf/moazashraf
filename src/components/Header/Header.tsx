@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import { Particiles } from "../Particiles/Particiles";
+import { ParticlesComponent } from "../Particles/Particles";
 function Header() {
   return (
     <main className={styles.header_wrapper}>
       <div className={styles.container}>
-        <Particiles />
+        <ParticlesComponent />
         <header className={styles.heading}>
           <span>turning ideas into</span>
           <br />
