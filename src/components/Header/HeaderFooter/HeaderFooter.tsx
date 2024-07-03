@@ -14,6 +14,9 @@ function HeaderFooter() {
         >
           💼 LD
         </a>
+        <a href="" rel="noopener" target="_blank">
+          📸 IN
+        </a>
       </div>
     </div>
   );
