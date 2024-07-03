@@ -9,7 +9,6 @@
     grid-column: 2 / 14;
     margin-top: $gutter_xxl;
     padding: 0 5.5rem;
-    z-index: 2;
 
     .heading {
       font-family: var(--font-mark-pro);
@@ -76,9 +75,9 @@
     .header_footer_paragraph {
       font-family: var(--font-circular);
       font-size: 1.6rem;
-      line-height: 130%;
+      line-height: 140%;
       color: $gray;
-      margin-top: $gutter_md;
+      display: block;
     }
   }
 }
@@ -112,6 +111,13 @@
       padding: 0 $gutter_md;
       .heading {
         font-size: 6.5rem;
+      }
+      .header_footer_paragraph {
+        font-size: 1.3rem;
+
+        br {
+          display: none;
+        }
       }
     }
   }

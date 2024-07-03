@@ -13,7 +13,7 @@ const markPro = localFont({
 });
 
 const circular = localFont({
-  src: "./Circular Std Book.woff",
+  src: "./Circular Std Book.woff2",
   variable: "--font-circular",
 });
 

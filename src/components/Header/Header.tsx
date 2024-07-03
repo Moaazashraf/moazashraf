@@ -5,9 +5,9 @@ import HeaderFooter from "./HeaderFooter/HeaderFooter";
 function Header() {
   return (
     <div className={styles.header_wrapper}>
-      <ParticlesComponent />
       <div className={styles.container}>
         <header className={styles.heading}>
+          <ParticlesComponent />
           <span>turning ideas into</span>
           <br />
           <span>real life </span>
@@ -17,11 +17,11 @@ function Header() {
         </header>
         <a className={styles.view_projects_btn}>VIEW PROJECTS</a>
         <HeaderFooter />
-        <div className={styles.header_footer_paragraph}>
+        <p className={styles.header_footer_paragraph}>
           Hello stranger! 👋, my name is Moaz and I am a fullstack engineer,
           passionate <br /> about digital products that help people experience
           everyday life, not endure it.
-        </div>
+        </p>
       </div>
     </div>
   );

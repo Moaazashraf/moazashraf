@@ -17,7 +17,7 @@ export const ParticlesComponent = () => {
     () => ({
       background: {
         color: {
-          value: "#000",
+          value: "transparent",
         },
       },
       fpsLimit: 120,
@@ -50,7 +50,7 @@ export const ParticlesComponent = () => {
           color: "#c4c4c4",
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.3,
           width: 1,
         },
         move: {
