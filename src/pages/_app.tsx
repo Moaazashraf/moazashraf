@@ -12,9 +12,16 @@ const markPro = localFont({
   variable: "--font-mark-pro",
 });
 
+const circular = localFont({
+  src: "./Circular Std Book.woff",
+  variable: "--font-circular",
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${dDinCondensed.variable} ${markPro.variable}`}>
+    <main
+      className={`${dDinCondensed.variable} ${markPro.variable} ${circular.variable}`}
+    >
       <Component {...pageProps} />
     </main>
   );

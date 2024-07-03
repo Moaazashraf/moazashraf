@@ -67,10 +67,10 @@ export const ParticlesComponent = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 75,
         },
         opacity: {
-          value: 0.5,
+          value: 0.3,
         },
         shape: {
           type: "circle",

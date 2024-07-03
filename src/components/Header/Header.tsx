@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import { ParticlesComponent } from "../Particles/Particles";
+import HeaderFooter from "./HeaderFooter/HeaderFooter";
 function Header() {
   return (
-    <main className={styles.header_wrapper}>
+    <div className={styles.header_wrapper}>
+      <ParticlesComponent />
       <div className={styles.container}>
-        <ParticlesComponent />
         <header className={styles.heading}>
           <span>turning ideas into</span>
           <br />
@@ -15,8 +16,14 @@ function Header() {
           <span>is my calling.</span>
         </header>
         <a className={styles.view_projects_btn}>VIEW PROJECTS</a>
+        <HeaderFooter />
+        <div className={styles.header_footer_paragraph}>
+          Hello stranger! 👋, my name is Moaz and I am a fullstack engineer,
+          passionate <br /> about digital products that help people experience
+          everyday life, not endure it.
+        </div>
       </div>
-    </main>
+    </div>
   );
 }
 
