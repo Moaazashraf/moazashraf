@@ -11,6 +11,7 @@
 
   .links {
     display: flex;
+    align-items: center;
     gap: $gutter_md;
 
     a {

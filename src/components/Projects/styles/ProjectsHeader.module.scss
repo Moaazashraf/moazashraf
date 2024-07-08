@@ -1,0 +1,64 @@
+@import "../../../styles/base/colors.scss";
+@import "../../../styles/base/typography.scss";
+@import "../../../styles/layout/grid.scss";
+
+.projects_header {
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    letter-spacing: -0.03em;
+    font-family: var(--font-mark-pro);
+    span {
+      margin-right: 1rem;
+      background-image: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+  }
+
+  .description {
+    font-family: var(--font-circular);
+    font-size: 1.6rem;
+    line-height: 130.4%;
+    color: $gray;
+    margin-top: $gutter_base;
+  }
+}
+
+@media (max-width: $screen_md) {
+  .projects_header {
+    .title {
+      font-size: 4.5rem;
+    }
+  }
+  .description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects_header {
+    .title {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .projects_header {
+    .title {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: $screen_xs) {
+  .projects_header {
+    .title {
+      font-size: 3rem;
+    }
+  }
+}
