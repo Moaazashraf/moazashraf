@@ -1,9 +1,12 @@
+import { StaticImageData } from "next/image";
+import omniFood from "../../../public/omnifood_logo.png";
+import food from "../../../public/food.png";
 export interface Project {
   id: number;
   name: string;
   tools: string[];
-  imageFront: string;
-  imageBack: string;
+  imageFront: StaticImageData;
+  imageBack: StaticImageData;
   link: string;
   gitHub: string;
 }
@@ -13,8 +16,8 @@ export const projects: Project[] = [
     id: 1,
     name: "Project One",
     tools: ["React", "Node.js"],
-    imageFront: "front1.jpg",
-    imageBack: "back1.jpg",
+    imageFront: omniFood,
+    imageBack: food,
     link: "http://example.com",
     gitHub: "http://github.com/example1",
   },
@@ -22,8 +25,17 @@ export const projects: Project[] = [
     id: 2,
     name: "Project Two",
     tools: ["Angular", "Express"],
-    imageFront: "front2.jpg",
-    imageBack: "back2.jpg",
+    imageFront: omniFood,
+    imageBack: food,
+    link: "http://example.com",
+    gitHub: "http://github.com/example2",
+  },
+  {
+    id: 3,
+    name: "Project Three",
+    tools: ["Angular", "Express"],
+    imageFront: omniFood,
+    imageBack: food,
     link: "http://example.com",
     gitHub: "http://github.com/example2",
   },

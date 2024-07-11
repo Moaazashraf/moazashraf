@@ -7,7 +7,7 @@ function Header() {
     const sectionProjects = document.getElementById("sectionProjects");
     if (!sectionProjects) return;
     window.scrollTo({
-      top: sectionProjects.offsetTop - 100,
+      top: sectionProjects.offsetTop,
       behavior: "smooth",
     });
   };
