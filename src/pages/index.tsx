@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
 import HomeComponent from "@/components/HomeComponent";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   return (
