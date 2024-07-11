@@ -3,6 +3,15 @@ import styles from "./Header.module.scss";
 import { ParticlesComponent } from "../Particles/Particles";
 import HeaderFooter from "./HeaderFooter/HeaderFooter";
 function Header() {
+  const goToProjects = () => {
+    const sectionProjects = document.getElementById("sectionProjects");
+    if (!sectionProjects) return;
+    window.scrollTo({
+      top: sectionProjects.offsetTop - 100,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={styles.header_wrapper}>
       <div className={styles.container}>
@@ -15,7 +24,9 @@ function Header() {
           <br />
           <span>is my calling.</span>
         </header>
-        <a className={styles.view_projects_btn}>VIEW PROJECTS</a>
+        <a className={styles.view_projects_btn} onClick={goToProjects}>
+          VIEW PROJECTS
+        </a>
         <HeaderFooter />
         <p className={styles.header_footer_paragraph}>
           Hello stranger! 👋, my name is Moaz and I am a fullstack engineer,
