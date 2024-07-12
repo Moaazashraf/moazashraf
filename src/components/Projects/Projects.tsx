@@ -1,12 +1,14 @@
 import React from "react";
 import ProjectsHeader from "./ProjectsHeader";
 import styles from "./styles/Projects.module.scss";
+import ProjectList from "./ProjectList";
 
 function Projects() {
   return (
-    <div className={styles.wrapper}>
+    <div id="sectionProjects" className={styles.wrapper}>
       <div className={styles.main}>
         <ProjectsHeader />
+        <ProjectList />
       </div>
     </div>
   );

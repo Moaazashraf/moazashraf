@@ -1,0 +1,132 @@
+@import "../../../styles/base/colors.scss";
+@import "../../../styles/base/typography.scss";
+@import "../../../styles/layout/grid.scss";
+
+.project_card {
+  width: 80%;
+  margin: 18.5rem auto;
+  background: linear-gradient(
+    180deg,
+    rgba(35, 37, 49, 0.5),
+    rgba(15, 15, 24, 0.5)
+  );
+  border: 0.15rem solid #20222e;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(54px);
+  backdrop-filter: blur(54px);
+  border-radius: 7rem;
+  display: flex;
+  align-items: center;
+  padding: 5.5rem;
+  position: relative;
+
+  .project_card__left {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    font-family: var(--font-d-din-condensed);
+    font-size: 1.2rem;
+    letter-spacing: 0.18em;
+    color: #8b8b8b;
+    line-height: 120%;
+    margin-right: 5.5rem;
+    text-transform: uppercase;
+  }
+
+  .project_card__middle {
+    width: 32.4rem;
+    height: 41.7rem;
+    background-size: cover;
+    position: relative;
+    border-radius: 5.3rem;
+    overflow: hidden;
+    z-index: 2;
+
+    img {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      object-fit: cover;
+      transition: all linear 0.7s;
+      width: 100%;
+      height: 100%;
+
+      &.first_img:hover {
+        opacity: 0;
+      }
+      &:hover {
+        scale: 1.5;
+      }
+    }
+  }
+
+  .project_card__right {
+    margin-left: 5.5rem;
+
+    .project_name {
+      background: var(--background-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400% 400%;
+      line-height: 105%;
+      animation: gradient 5s ease-in-out infinite;
+      font-size: 3.8rem;
+      line-height: 105%;
+      letter-spacing: -0.02em;
+      color: white;
+      font-family: var(--font-mark-pro);
+      margin-bottom: 5.5rem;
+    }
+
+    .visit_btn {
+      display: inline-block;
+      font-family: var(--font-d-din-condensed);
+      font-size: 1.67rem;
+      line-height: 92.4%;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      position: relative;
+      color: var(--text-color);
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -0.9rem;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: $gray;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        cursor: pointer;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .github_link {
+      margin-top: 10rem;
+      display: flex;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
