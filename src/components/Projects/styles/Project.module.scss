@@ -58,4 +58,66 @@
       }
     }
   }
+
+  .project_card__right {
+    margin-left: 5.5rem;
+
+    .project_name {
+      background: var(--background-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400% 400%;
+      line-height: 105%;
+      animation: gradient 3s ease-in-out infinite;
+      font-size: 3.8rem;
+      line-height: 105%;
+      letter-spacing: -0.02em;
+      color: white;
+      font-family: var(--font-mark-pro);
+      margin-bottom: 5.5rem;
+    }
+
+    .visit_btn {
+      display: inline-block;
+      font-family: var(--font-d-din-condensed);
+      font-size: 1.67rem;
+      line-height: 92.4%;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      position: relative;
+      color: var(--text-color);
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -0.9rem;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: $gray;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        cursor: pointer;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

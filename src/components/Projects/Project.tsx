@@ -11,6 +11,8 @@ interface projectProps {
     imageBack: StaticImageData;
     link: string;
     gitHub: string;
+    backgroundStyle: React.CSSProperties;
+    buttonColor: React.CSSProperties;
   };
 }
 
@@ -29,8 +31,28 @@ function Project(props: projectProps) {
         />
       </div>
       <div className={styles.project_card__right}>
-        <h2>{props.project.name}</h2>
-        <a href={props.project.link}>VISIT THE WEBSITE</a>
+        <h2
+          style={
+            {
+              "--background-gradient": props.project.backgroundStyle,
+            } as React.CSSProperties
+          }
+          className={styles.project_name}
+        >
+          {props.project.name}
+        </h2>
+        <a
+          style={
+            {
+              "--text-color": props.project.buttonColor,
+            } as React.CSSProperties
+          }
+          className={styles.visit_btn}
+          href={props.project.link}
+          target="_blank"
+        >
+          VISIT THE WEBSITE
+        </a>
         <div>
           <a href={props.project.gitHub}></a>
         </div>
