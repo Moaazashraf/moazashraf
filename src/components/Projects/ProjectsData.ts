@@ -1,6 +1,10 @@
 import { StaticImageData } from "next/image";
 import omniFood from "../../../public/omnifood_logo.png";
+import natours from "../../../public/natours_logo.jpg";
+import zed from "../../../public/zed_logo.jpg";
 import food from "../../../public/food.png";
+import travel from "../../../public/travel.jpg";
+import villa from "../../../public/villa.jpg";
 export interface Project {
   id: number;
   name: string;
@@ -8,7 +12,7 @@ export interface Project {
   imageFront: StaticImageData;
   imageBack: StaticImageData;
   link: string;
-  gitHub: string;
+  gitHub?: string;
   backgroundStyle: string;
   buttonColor: string;
 }
@@ -21,30 +25,29 @@ export const projects: Project[] = [
     imageFront: omniFood,
     imageBack: food,
     link: "https://omnifood-ten-psi.vercel.app",
-    gitHub: "http://github.com/example1",
-    backgroundStyle: "linear-gradient(-45deg, #f9c0a2, #f5e0d4, white, white);",
+    gitHub: "https://github.com/Moaazashraf/omnifood",
+    backgroundStyle: "linear-gradient(-45deg, #e68450, #f1a278, white, white)",
     buttonColor: "#e3753b",
   },
   {
     id: 2,
-    name: "Project Two",
-    tools: ["Angular", "Express"],
-    imageFront: omniFood,
-    imageBack: food,
-    link: "http://example.com",
-    gitHub: "http://github.com/example2",
-    backgroundStyle: "linear-gradient(-45deg, #e68450, #f1a278, white, white)",
-    buttonColor: "#d15818",
+    name: "Natours",
+    tools: ["next.ts", "scss", "framer motion"],
+    imageFront: natours,
+    imageBack: travel,
+    link: "https://natours-gules-five.vercel.app",
+    gitHub: "https://github.com/Moaazashraf/natours",
+    backgroundStyle: "linear-gradient(-45deg, #308C09, #6CD93E, white, white)",
+    buttonColor: "#308C09",
   },
   {
     id: 3,
-    name: "Project Three",
-    tools: ["Angular", "Express"],
-    imageFront: omniFood,
-    imageBack: food,
-    link: "http://example.com",
-    gitHub: "http://github.com/example2",
-    backgroundStyle: "linear-gradient(-45deg, #e68450, #f1a278, white, white)",
-    buttonColor: "#d15818",
+    name: "ZED",
+    tools: ["React.js", "CSS", "PHP"],
+    imageFront: zed,
+    imageBack: villa,
+    link: "https://zed-beryl.vercel.app/",
+    backgroundStyle: "linear-gradient(-45deg, #3777B4, #78B9F7, white, white)",
+    buttonColor: "#3777B4",
   },
 ];

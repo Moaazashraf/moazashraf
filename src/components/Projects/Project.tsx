@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles/Project.module.scss";
 import Image, { StaticImageData } from "next/image";
+import github from "../../../public/github.svg";
 
 interface projectProps {
   project: {
@@ -10,7 +11,7 @@ interface projectProps {
     imageFront: StaticImageData;
     imageBack: StaticImageData;
     link: string;
-    gitHub: string;
+    gitHub?: string;
     backgroundStyle: React.CSSProperties;
     buttonColor: React.CSSProperties;
   };
@@ -23,11 +24,12 @@ function Project(props: projectProps) {
         {props.project.tools.join(", ")}
       </div>
       <div className={styles.project_card__middle}>
-        <Image src={props.project.imageFront} alt="image back" />
+        <Image src={props.project.imageFront} alt="image back" loading="lazy" />
         <Image
           className={styles.first_img}
           src={props.project.imageBack}
           alt="image front"
+          loading="lazy"
         />
       </div>
       <div className={styles.project_card__right}>
@@ -53,9 +55,17 @@ function Project(props: projectProps) {
         >
           VISIT THE WEBSITE
         </a>
-        <div>
-          <a href={props.project.gitHub}></a>
-        </div>
+        {props.project.gitHub && (
+          <div>
+            <a
+              className={styles.github_link}
+              href={props.project.gitHub}
+              target="_blank"
+            >
+              <Image width={20} src={github} height={20} alt="github" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
