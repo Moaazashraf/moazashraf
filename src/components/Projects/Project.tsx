@@ -12,8 +12,8 @@ interface projectProps {
     imageBack: StaticImageData;
     link: string;
     gitHub?: string;
-    backgroundStyle: React.CSSProperties;
-    buttonColor: React.CSSProperties;
+    backgroundStyle: string;
+    buttonColor: string;
   };
 }
 
