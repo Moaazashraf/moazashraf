@@ -18,11 +18,15 @@ function Project(props: projectProps) {
   return (
     <div className={styles.project_card}>
       <div className={styles.project_card__left}>
-        {props.project.tools.join(" ,")}
+        {props.project.tools.join(", ")}
       </div>
       <div className={styles.project_card__middle}>
-        <Image src={props.project.imageFront} alt="image front" />
-        <Image src={props.project.imageBack} alt="image back" />
+        <Image src={props.project.imageFront} alt="image back" />
+        <Image
+          className={styles.first_img}
+          src={props.project.imageBack}
+          alt="image front"
+        />
       </div>
       <div className={styles.project_card__right}>
         <h2>{props.project.name}</h2>

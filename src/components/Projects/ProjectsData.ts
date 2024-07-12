@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Project One",
-    tools: ["React", "Node.js"],
+    tools: ["HTML", "CSS", "JavaScript"],
     imageFront: omniFood,
     imageBack: food,
     link: "http://example.com",
