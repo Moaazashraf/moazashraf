@@ -20,6 +20,14 @@
   padding: 5.5rem;
   position: relative;
 
+  .project_number {
+    position: absolute;
+    top: -7rem;
+    right: -5rem;
+    width: 14rem;
+    height: 14rem;
+  }
+
   .project_card__left {
     transform: rotate(180deg);
     writing-mode: vertical-rl;

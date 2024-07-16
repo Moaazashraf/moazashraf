@@ -14,12 +14,19 @@ interface projectProps {
     gitHub?: string;
     backgroundStyle: string;
     buttonColor: string;
+    backgroundNumber: StaticImageData;
   };
 }
 
 function Project(props: projectProps) {
   return (
     <div className={styles.project_card}>
+      <Image
+        src={props.project.backgroundNumber}
+        alt="project number"
+        className={styles.project_number}
+        loading="lazy"
+      />
       <div className={styles.project_card__left}>
         {props.project.tools.join(", ")}
       </div>
